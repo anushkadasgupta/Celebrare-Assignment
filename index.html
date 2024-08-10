@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Celebrare-Upload your image</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    
+    <body>
+        <div class="box-one">
+            <i class="fas fa-angle-left" style="font-size:36px;color:darkgray;margin-top:18px;margin-left:6px"></i>
+            <h2 style="text-align:center;margin-left:550px">Add Image / Icon</h2>
+        </div>
+        <br>
+        <div class="box-two">
+            <h3 style="text-align:center">Upload Image</h3>
+            <br>
+            <label for="img" class="image-upload">Choose from device</label>
+            <input type="file" id="img" accept="image/*">
+            <br>
+            <div class="display-image1">
+                <img id="previewImage" src="">
+            </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="box">
+                        <span class="close" id="closebtn" style="font-size:24px;cursor:pointer"><i class="fas fa-arrow-left"></i></span>
+                        <div class="icons">
+                            <span onclick="rotation()" class="rotatebutton" id="rotbtn"><i class="fas fa-rotate-right" style="font-size:24px;cursor:pointer"></i></span>
+                            <span onclick="flipOpenAndClose()" class="flipbutton" style="margin-left:12px;font-size:28px;cursor:pointer"><i class="material-icons">&#xe3e8;</i></i></span>
+                            <div id="myModal3" class="modal3">
+                            <div class="modal-content3">
+                                <span onclick="flipHorizontal()" style="cursor:pointer"><h6>Flip horizontally</h6></span>
+                                <span onclick="flipVertical()" style="cursor:pointer"><h6>Flip vertically</h6></span>
+                            </div>
+                            </div>
+                                <button id="openbutton" class="cropbutton" style="height:25px;margin-left:12px;background-color:ghostwhite;border-radius:5px;cursor:pointer">CROP</button>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="display-image2">
+                        <img id="modalImage" src="">
+                    </div>
+                </div>
+            </div> 
+            <div id="myModal2" class="modal2">
+                <div class="modal-content2">
+                    <span id="closemodal" style="cursor:pointer;border: 1px solid;border-radius:50%;background-color:darkgray;padding:10px;height:15px;color:white;margin-left:900px">&#10005;</span>
+                    <h3 style="color:darkgray;font-style:italic;text-align:center">Uploaded Image</h3>
+                    <div class="display-image3">
+                        <img id="finalImage" src="">
+                    </div>
+                    <div style="display:flex;justify-content:center">
+                        <button onclick="original()" style="background-color:white;border-radius:5px;cursor:pointer" id="original-button">Original</button>
+                        <button onclick="square()" class="allbutton" id="square-button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU8u8tpVE9yl1Jj0L81O7deRDfyW-yOXX-Kw&s" alt="square" height="30px" width="30px"></button>
+                        <button onclick="round()" class="allbutton" id="round-button"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Black_Circle.jpg" alt="circle" height="30px" width="30px"></button>
+                        <button onclick="rectangle()" class="allbutton" id="rectangle-button"><img src="https://www.svgrepo.com/download/311797/black-rectangle.svg" alt="rectangle" height="30px" width="30px"></button>
+                    </div>
+                    <br>
+                    <button class="savebutton" id="savebtn">Use this image</button>
+                </div>
+            </div>            
+        </div>
+        <script src="script.js"></script>
+    </body>    
+
+</html>
